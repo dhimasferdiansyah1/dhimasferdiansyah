@@ -1,101 +1,390 @@
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  ExternalLink,
+  MoveRight,
+  Download,
+  // ThumbsUp,
+  // Eye,
+} from "lucide-react";
 import Image from "next/image";
+import ImageModal from "@/components/ImageModal";
+import { Suspense } from "react";
+import Link from "next/link";
+import StatsButton from "@/components/Stats";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex min-h-screen w-full justify-center bg-zinc-900 py-12 px-8">
+      <div className="mx-auto max-w-5xl w-full">
+        <div className="flex flex-col lg:flex-row gap-16">
+          {/* Section 1 */}
+          <div className="basis-1/3 flex flex-col w-full">
+            <div className="flex justify-between items-start">
+              <Image
+                src="/dhimas.png"
+                alt="profile"
+                width={200}
+                height={200}
+                className="rounded-full w-28 h-28 object-cover object-top shadow shadow-white/50"
+              />
+              <StatsButton />
+            </div>
+            <h1 className="text-3xl font-bold mt-4 text-white">
+              Dhimas Ferdiansyah
+            </h1>
+            <div className="flex flex-col mt-2">
+              <p className="text-lg text-zinc-400">Fullstack Developer</p>
+              <p className="text-lg text-zinc-400 flex items-center gap-2">
+                Based on Indonesia
+                <Image
+                  src="/indonesia.png"
+                  alt="indonesia"
+                  width={20}
+                  height={20}
+                  draggable={false}
+                />
+              </p>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="mt-4 border-y-2 border-zinc-600">
+              <p className="italic text-zinc-400 text-sm text-center bg-zinc-800/40 px-2 py-4">
+                &quot;Crafting efficient, scalable, and maintainable web
+                applications&quot;
+              </p>
+            </div>
+
+            <div className="flex mt-4 gap-2 items-center">
+              <a
+                href="/resume/CV_Dhimas_Ferdiansyah.pdf"
+                download
+                className="bg-zinc-50 flex items-center gap-2 text-zinc-900 hover:bg-zinc-200 transition-colors duration-200 px-4 py-2 rounded-md"
+              >
+                <Download size={32} className="w-4 h-4 sm:w-8 sm:h-8" />
+                Resume
+              </a>
+
+              {/* Social Media Icons */}
+              <a
+                href="https://github.com/dhimasferdiansyah1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-zinc-700 text-zinc-100 hover:bg-zinc-600 transition-colors duration-200 p-2 rounded-md"
+              >
+                <Github size={32} className="w-6 h-6 sm:w-8 sm:h-8" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dhimasferdiansyah/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-zinc-700 text-zinc-100 hover:bg-zinc-600 transition-colors duration-200 p-2 rounded-md"
+              >
+                <Linkedin size={32} className="w-6 h-6 sm:w-8 sm:h-8" />
+              </a>
+              <a
+                href="https://www.instagram.com/dhimas.ferdiansyah/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-zinc-700 text-zinc-100 hover:bg-zinc-600 transition-colors duration-200 p-2 rounded-md"
+              >
+                <Instagram size={32} className="w-6 h-6 sm:w-8 sm:h-8" />
+              </a>
+            </div>
+          </div>
+
+          {/* Section 2 */}
+          <div className="basis-2/3 flex flex-col w-full">
+            {/* About me */}
+            <div className="mt-4">
+              <h2 className="text-2xl font-bold text-white">About Me</h2>
+              <p className="text-lg text-zinc-400 mt-2">
+                I am 21 years old, Bachelor in Information Systems and Fullstack
+                Developer with 3 years of experience. Focused on building
+                efficient web solutions.
+              </p>
+            </div>
+            {/* Skills */}
+            <div className="mt-10">
+              <h2 className="text-2xl font-bold text-white">Skills</h2>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {[
+                  "React",
+                  "PHP",
+                  "Next.js",
+                  "Remix",
+                  "PostgreSQL",
+                  "MySQL",
+                  "Node.js",
+                  "Git",
+                  "Tailwind CSS",
+                  "Adobe Photoshop",
+                  "Figma",
+                ].map((skill) => {
+                  let bgColor;
+                  let textColor;
+                  let image;
+
+                  switch (skill) {
+                    case "React":
+                      image = "/skills/react-svgrepo-com.svg";
+                      bgColor = "bg-blue-500";
+                      break;
+                    case "PHP":
+                      image = "/skills/php-svgrepo-com.svg";
+                      bgColor = "bg-[#7377AD]";
+                      break;
+                    case "Next.js":
+                      image = "/skills/nextjs-icon-svgrepo-com.svg";
+                      bgColor = "bg-gray-800";
+                      break;
+                    case "Remix":
+                      image = "/skills/remix.png";
+                      bgColor = "bg-white";
+                      break;
+                    case "PostgreSQL":
+                      image = "/skills/postgresql-svgrepo-com.svg";
+                      bgColor = "bg-[#31648C]";
+                      break;
+                    case "MySQL":
+                      image = "/skills/mysql-logo-svgrepo-com.svg";
+                      bgColor = "bg-[#DF8C0F]";
+                      break;
+                    case "Node.js":
+                      image = "/skills/node-js-svgrepo-com.svg";
+                      bgColor = "bg-[#8CC84B]";
+                      break;
+                    case "Git":
+                      image = "/skills/git-svgrepo-com.svg";
+                      bgColor = "bg-[#F05539]";
+                      break;
+                    case "Tailwind CSS":
+                      image = "/skills/tailwind-svgrepo-com.svg";
+                      bgColor = "bg-teal-600";
+                      break;
+                    case "Adobe Photoshop":
+                      image = "/skills/photoshop-svgrepo-com.svg";
+                      bgColor = "bg-[#37AAFE]";
+                      break;
+                    case "Figma":
+                      image = "/skills/figma-svgrepo-com.svg";
+                      bgColor = "bg-pink-600";
+                      break;
+                    default:
+                      bgColor = "bg-zinc-700";
+                  }
+
+                  return (
+                    <span
+                      key={skill}
+                      className={`${bgColor} ${textColor} text-zinc-200 bg-opacity-50 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md`}
+                    >
+                      <Image
+                        src={image || ""}
+                        width={16}
+                        height={16}
+                        alt={skill}
+                        draggable={false}
+                      />
+                      {skill}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Experience */}
+            <div className="mt-10">
+              <h2 className="text-2xl font-bold text-white">Experience</h2>
+
+              <div className="flex gap-4 mt-4 items-start">
+                {/* Logo for Company 1 */}
+                <Image
+                  src="/kominfo.png"
+                  width={48}
+                  height={48}
+                  alt="Kominfo Logo"
+                  className="w-12 h-12 object-cover rounded-full bg-zinc-700"
+                />
+                <div>
+                  <h3 className="text-lg font-bold text-zinc-400">
+                    Cybersecurity Analyst, Balitbang SDM - Ministry of
+                    Communication and Informatics, Jakarta{" "}
+                    <span className="bg-zinc-800 text-sky-400 text-sm py-1 px-3 rounded-full ml-2">
+                      2023
+                    </span>
+                  </h3>
+                  <div className="flex flex-col gap-1 mt-1">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
+                      <p className="text-lg text-zinc-500">
+                        Led cybersecurity risk assessment & remediation planning
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      <p className="text-lg text-zinc-500">
+                        Top 50 selectee for G20 training, Bali
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-4 mt-4 items-start">
+                {/* Logo for Company 2 */}
+                <Image
+                  src="/kampusmengajar.png"
+                  alt="SDN 6 Muara Satu Logo"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-cover rounded-full bg-zinc-700"
+                />
+                <div>
+                  <h3 className="text-lg font-bold text-zinc-400">
+                    Teacher, Kampus Mengajar – SDN 6 Muara Satu, Lhokseumawe{" "}
+                    <span className="bg-zinc-800 text-sky-400 text-sm py-1 px-3 rounded-full ml-2">
+                      2023
+                    </span>
+                  </h3>
+                  <div className="flex flex-col gap-1 mt-1">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                      <p className="text-lg text-zinc-500">
+                        Taught literacy and numeracy with interactive methods
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                      <p className="text-lg text-zinc-500">
+                        Led teacher collaborations for education enhancement
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Projects */}
+              <div className="mt-10">
+                <h2 className="text-2xl font-bold text-white">Projects</h2>
+                <div className="flex flex-col gap-4 mt-4">
+                  <div className="flex flex-col sm:flex-row gap-4 items-start">
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <ImageModal
+                        src="/projects/project1.png"
+                        alt="Project 1"
+                      />
+                    </Suspense>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                        <h3 className="text-lg font-bold text-zinc-400">
+                          Monitoring Billing Receivable
+                        </h3>
+                        <p className="text-lg text-zinc-500 mt-1">
+                          Monitoring Billing Receivable To Customer Key Account
+                          Modern Web Application
+                        </p>
+                      </div>
+                      {/* badge what technology that i use */}
+                      <div className="flex gap-2">
+                        <span className="bg-blue-500 text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          React
+                        </span>
+                        <span className="bg-gray-800 text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          Next.js
+                        </span>
+                        <span className="bg-[#31648C] text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          PostgreSQL
+                        </span>
+                      </div>
+                      {/* link to live demo or github repo */}
+                      <div className="flex gap-4">
+                        <a
+                          href="https://monitoringpiutangtigaraksa.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-zinc-100 bg-zinc-700 hover:bg-zinc-600 py-1 px-3 flex items-center gap-2 transition-colors duration-200 rounded-md"
+                        >
+                          Live Demo <ExternalLink size={16} />
+                        </a>
+                        <a
+                          href="https://github.com/dhimasferdiansyah1/monitoringpiutang"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-zinc-100 bg-zinc-700 hover:bg-zinc-600 py-1 px-3 flex items-center gap-2 transition-colors duration-200 rounded-md"
+                        >
+                          Github <Github size={16} />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 items-start mt-2">
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <ImageModal
+                        src="/projects/project2.png"
+                        alt="Project 2"
+                      />
+                    </Suspense>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                        <h3 className="text-lg font-bold text-zinc-400">
+                          Alternative World
+                        </h3>
+                        <p className="text-lg text-zinc-500 mt-1">
+                          Alternative World is a Minecraft server that allows
+                          players to cross-play between Java Edition and Bedrock
+                          Edition
+                        </p>
+                      </div>
+                      {/* badge what technology that i use */}
+                      <div className="flex gap-2">
+                        <span className="bg-blue-500 text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          React
+                        </span>
+                        <span className="bg-gray-800 text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          Next.js
+                        </span>
+                        <span className="bg-[#31648C] text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          PostgreSQL
+                        </span>
+                      </div>
+                      {/* link to live demo or github repo */}
+                      <div className="flex gap-4">
+                        <a
+                          href="https://alt-w.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-zinc-100 bg-zinc-700 hover:bg-zinc-600 py-1 px-3 flex items-center gap-2 transition-colors duration-200 rounded-md"
+                        >
+                          Live Demo <ExternalLink size={16} />
+                        </a>
+                        <a
+                          href="https://vercel.com/dhimasferdiansyah1s-projects/alt-w"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-zinc-100 bg-zinc-700 hover:bg-zinc-600 py-1 px-3 flex items-center gap-2 transition-colors duration-200 rounded-md"
+                        >
+                          Github <Github size={16} />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* view all projects button */}
+                  <div className="flex justify-end w-full">
+                    <Link
+                      href={"/projects"}
+                      className="bg-zinc-700 flex justify-center items-center gap-2 w-full text-zinc-100 hover:bg-zinc-600 transition-colors duration-200 px-4 py-2 rounded-md"
+                    >
+                      View All Projects <MoveRight size={16} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
