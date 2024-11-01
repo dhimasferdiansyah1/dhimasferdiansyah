@@ -49,7 +49,7 @@ const projects = [
     image: "/projects/project2.png",
     technologies: ["React", "Next.js", "PostgreSQL"],
     liveDemo: "https://alt-w.vercel.app/",
-    github: "https://vercel.com/dhimasferdiansyah1s-projects/alt-w",
+    github: "https://github.com/dhimasferdiansyah1/alternative-network",
   },
   {
     title: "Todo App",

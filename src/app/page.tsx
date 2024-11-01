@@ -360,7 +360,7 @@ export default function Home() {
                           Live Demo <ExternalLink size={16} />
                         </a>
                         <a
-                          href="https://vercel.com/dhimasferdiansyah1s-projects/alt-w"
+                          href="https://github.com/dhimasferdiansyah1/alternative-network"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-zinc-100 bg-zinc-700 hover:bg-zinc-600 py-1 px-3 flex items-center gap-2 transition-colors duration-200 rounded-md"
