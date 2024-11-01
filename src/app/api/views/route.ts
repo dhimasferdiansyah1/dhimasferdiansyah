@@ -1,4 +1,6 @@
 // app/api/views/route.ts
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { PrismaClient } from "@prisma/client";
