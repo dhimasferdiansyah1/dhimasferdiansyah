@@ -41,7 +41,7 @@ export default function StatsButton() {
 
   useEffect(() => {
     fetchStats();
-    const intervalId = setInterval(fetchStats, 5000);
+    const intervalId = setInterval(fetchStats, 10000);
     return () => clearInterval(intervalId);
   }, []);
 
