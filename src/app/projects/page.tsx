@@ -118,7 +118,7 @@ export default function Projects() {
                         key={techIndex}
                         className={`${getBadgeColor(
                           tech
-                        )} bg-opacity-50 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md text-zinc-200`}
+                        )} bg-opacity-20 text-opacity-50 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md text-zinc-200`}
                       >
                         {tech}
                       </span>

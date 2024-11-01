@@ -22,7 +22,7 @@ export default function ImageModal({ src, alt }: ImageModalProps) {
         width={2048}
         height={2048}
         alt={alt}
-        className="w-full h-auto sm:w-64 sm:h-64 object-cover rounded-md bg-zinc-700 cursor-pointer"
+        className="w-full h-auto sm:w-72 sm:h-72 object-cover rounded-md bg-zinc-700 cursor-pointer"
         onClick={toggleModal}
       />
       <AnimatePresence>

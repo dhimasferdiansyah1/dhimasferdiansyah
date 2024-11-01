@@ -114,8 +114,10 @@ export default function Home() {
                   "Remix",
                   "PostgreSQL",
                   "MySQL",
+                  "Prisma",
                   "Node.js",
                   "Git",
+                  "Typescript",
                   "Tailwind CSS",
                   "Adobe Photoshop",
                   "Figma",
@@ -141,6 +143,11 @@ export default function Home() {
                       image = "/skills/remix.png";
                       bgColor = "bg-white";
                       break;
+                    case "Prisma":
+                      image = "/skills/prisma-svgrepo-com.svg";
+                      bgColor = "bg-[#2D3748]";
+                      textColor = "text-white";
+                      break;
                     case "PostgreSQL":
                       image = "/skills/postgresql-svgrepo-com.svg";
                       bgColor = "bg-[#31648C]";
@@ -156,6 +163,10 @@ export default function Home() {
                     case "Git":
                       image = "/skills/git-svgrepo-com.svg";
                       bgColor = "bg-[#F05539]";
+                      break;
+                    case "Typescript":
+                      image = "/skills/typescript-official-svgrepo-com.svg";
+                      bgColor = "bg-[#007ACC]";
                       break;
                     case "Tailwind CSS":
                       image = "/skills/tailwind-svgrepo-com.svg";
@@ -286,15 +297,18 @@ export default function Home() {
                         </p>
                       </div>
                       {/* badge what technology that i use */}
-                      <div className="flex gap-2">
-                        <span className="bg-blue-500 text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
-                          React
-                        </span>
-                        <span className="bg-gray-800 text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-gray-800/20 text-zinc-100/50 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
                           Next.js
                         </span>
-                        <span className="bg-[#31648C] text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                        <span className="bg-[#31648C]/20 text-zinc-100/50 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
                           PostgreSQL
+                        </span>
+                        <span className="bg-[#007ACC]/20 text-zinc-100/50 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          Typescript
+                        </span>
+                        <span className="bg-teal-600/20 text-zinc-100/50 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          Tailwind CSS
                         </span>
                       </div>
                       {/* link to live demo or github repo */}
@@ -338,15 +352,18 @@ export default function Home() {
                         </p>
                       </div>
                       {/* badge what technology that i use */}
-                      <div className="flex gap-2">
-                        <span className="bg-blue-500 text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
-                          React
-                        </span>
-                        <span className="bg-gray-800 text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-gray-800/20 text-zinc-100/50 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
                           Next.js
                         </span>
-                        <span className="bg-[#31648C] text-zinc-100 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                        <span className="bg-[#31648C]/20 text-zinc-100/50 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
                           PostgreSQL
+                        </span>
+                        <span className="bg-[#007ACC]/20 text-zinc-100/50 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          Typescript
+                        </span>
+                        <span className="bg-teal-600/20 text-zinc-100/50 bg-opacity-40 hover:brightness-150 duration-300 flex items-center gap-1.5 brightness-110 text-sm px-3 py-1 hover:cursor-default rounded-md">
+                          Tailwind CSS
                         </span>
                       </div>
                       {/* link to live demo or github repo */}
