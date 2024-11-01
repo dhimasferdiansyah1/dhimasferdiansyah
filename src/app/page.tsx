@@ -50,8 +50,7 @@ export default function Home() {
 
             <div className="mt-4 border-y-2 border-zinc-600">
               <p className="italic text-zinc-400 text-sm text-center bg-zinc-800/40 px-2 py-4">
-                &quot;Crafting efficient, scalable, and maintainable web
-                applications&quot;
+                &quot;Code without compromise, results without limits&quot;
               </p>
             </div>
 
@@ -218,13 +217,14 @@ export default function Home() {
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
                       <p className="text-lg text-zinc-500">
-                        Led cybersecurity risk assessment & remediation planning
+                        Led cybersecurity risk assessment & remediation
+                        planning.
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
                       <p className="text-lg text-zinc-500">
-                        Top 50 selectee for G20 training, Bali
+                        Top 50 selectee for G20 training, Bali.
                       </p>
                     </div>
                   </div>
@@ -251,13 +251,13 @@ export default function Home() {
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                       <p className="text-lg text-zinc-500">
-                        Taught literacy and numeracy with interactive methods
+                        Taught literacy and numeracy with interactive methods.
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                       <p className="text-lg text-zinc-500">
-                        Led teacher collaborations for education enhancement
+                        Led teacher collaborations for education enhancement.
                       </p>
                     </div>
                   </div>
