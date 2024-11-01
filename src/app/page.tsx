@@ -35,7 +35,7 @@ export default function Home() {
               Dhimas Ferdiansyah
             </h1>
             <div className="flex flex-col mt-2">
-              <p className="text-lg text-zinc-400">Fullstack Developer</p>
+              <p className="text-lg text-zinc-400">Fullstack Web Developer</p>
               <p className="text-lg text-zinc-400 flex items-center gap-2">
                 Based on Indonesia
                 <Image
@@ -100,7 +100,7 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-white">About Me</h2>
               <p className="text-lg text-zinc-400 mt-2">
                 I am 21 years old, Bachelor in Information Systems and Fullstack
-                Developer with 3 years of experience. Focused on building
+                Web Developer with 3 years of experience. Focused on building
                 efficient web solutions.
               </p>
             </div>
