@@ -28,7 +28,7 @@ export async function GET() {
 
     if (
       !lastView ||
-      now.getTime() - new Date(lastView).getTime() > 15 * 60 * 1000
+      now.getTime() - new Date(lastView).getTime() > 30 * 60 * 1000
     ) {
       // Tambah view baru jika sudah lebih dari 15 menit
       await prisma.pageView.create({
