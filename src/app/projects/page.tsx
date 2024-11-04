@@ -78,7 +78,15 @@ const projects = [
     liveDemo: "https://smksimelda.vercel.app/",
     github: "https://github.com/dhimasferdiansyah1/remake-smks-imelda-medan",
   },
-  // Add more projects as needed
+  {
+    title: "Better Auth",
+    description:
+      "Learn how to build a better authentication system with Better Auth",
+    image: "/projects/project6.png",
+    technologies: ["React", "Next.JS", "PostgreSQL"],
+    liveDemo: "https://better-auth-df.vercel.app/",
+    github: "https://github.com/dhimasferdiansyah1/better-auth",
+  },
 ];
 
 export default function Projects() {
