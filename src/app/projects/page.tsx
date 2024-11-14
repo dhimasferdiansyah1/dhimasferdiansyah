@@ -13,6 +13,8 @@ const getBadgeColor = (tech: string) => {
       return "bg-gray-800";
     case "Remix":
       return "bg-white text-black";
+    case "Svelte":
+      return "bg-[#FF3E00]";
     case "PostgreSQL":
       return "bg-[#31648C]";
     case "MySQL":
@@ -86,6 +88,15 @@ const projects = [
     technologies: ["React", "Next.JS", "PostgreSQL"],
     liveDemo: "https://better-auth-df.vercel.app/",
     github: "https://github.com/dhimasferdiansyah1/better-auth",
+  },
+  {
+    title: "SvelteKit Todo",
+    description:
+      "A simple todo app build with SvelteKit that allows you to add, edit, and delete tasks",
+    image: "/projects/project7.png",
+    technologies: ["Svelte", "Prisma", "PostgreSQL"],
+    liveDemo: "https://raw-sveltekit-todo-dhimas.vercel.app/",
+    github: "https://github.com/dhimasferdiansyah1/raw-sveltekit-todo",
   },
 ];
 

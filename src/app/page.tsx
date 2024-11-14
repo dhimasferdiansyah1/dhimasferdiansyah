@@ -143,6 +143,10 @@ export default function Home() {
                       image = "/skills/remix.png";
                       bgColor = "bg-white";
                       break;
+                    case "Svelte":
+                      image = "/skills/svelte.png";
+                      bgColor = "bg-[#FF3E00]";
+                      break;
                     case "Prisma":
                       image = "/skills/prisma-svgrepo-com.svg";
                       bgColor = "bg-[#2D3748]";
