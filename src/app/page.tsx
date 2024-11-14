@@ -112,6 +112,7 @@ export default function Home() {
                   "PHP",
                   "Next.js",
                   "Remix",
+                  "Svelte",
                   "PostgreSQL",
                   "MySQL",
                   "Prisma",
