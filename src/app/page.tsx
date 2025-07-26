@@ -34,8 +34,30 @@ export default function Home() {
             <h1 className="text-3xl font-bold mt-4 text-white">
               Dhimas Ferdiansyah
             </h1>
-            <div className="flex flex-col mt-2">
-              <p className="text-lg text-zinc-400">Fullstack Web Developer</p>
+
+            {/* ======================= START PERUBAHAN ======================= */}
+            <div className="flex flex-col mt-3 gap-2">
+              {/* Label Pekerjaan Utama */}
+              <div className="flex items-center gap-2 bg-zinc-800 border border-zinc-700 rounded-full px-3 py-1.5 w-fit">
+                <Image
+                  src="/bgn.png" // <-- GANTI DENGAN PATH LOGO ANDA
+                  alt="Logo Badan Gizi Nasional"
+                  width={20}
+                  height={20}
+                  className="w-8 h-8"
+                />
+                <p className="text-sm font-medium text-zinc-200">
+                  Kepala SPPG Badan Gizi Nasional
+                </p>
+              </div>
+
+              {/* Label Pekerjaan Sampingan (Dibuat tidak menonjol) */}
+              <p className="text-xs text-zinc-500">
+                Fullstack Web Developer (Side Projects)
+              </p>
+            </div>
+
+            {/* <div className="flex flex-col mt-2">
               <p className="text-lg text-zinc-400 flex items-center gap-2">
                 Based on Indonesia
                 <Image
@@ -46,23 +68,25 @@ export default function Home() {
                   draggable={false}
                 />
               </p>
-            </div>
+            </div> */}
+            {/* ======================== END PERUBAHAN ======================== */}
 
             <div className="mt-4 border-y-2 border-zinc-600">
               <p className="italic text-zinc-400 text-sm text-center bg-zinc-800/40 px-2 py-4">
-                &quot;Code without compromise, results without limits&quot;
+                &quot;Code is poetry written for the future&quot;
               </p>
             </div>
 
-            <div className="flex mt-4 gap-2 items-center">
-              <a
-                href="/resume/CV_Dhimas_Ferdiansyah.pdf"
-                download
-                className="bg-zinc-50 flex items-center gap-2 text-zinc-900 hover:bg-zinc-200 transition-colors duration-200 px-4 py-2 rounded-md"
+            <div className="flex mt-4 gap-2 items-center disabled:opacity-50">
+              <button
+                disabled
+                // href="/resume/CV_Dhimas_Ferdiansyah.pdf"
+                // download
+                className="bg-zinc-50 disabled:opacity-35 flex items-center gap-2 text-zinc-900 hover:bg-zinc-200 transition-colors duration-200 px-4 py-2 rounded-md"
               >
-                <Download size={32} className="w-4 h-4 sm:w-8 sm:h-8" />
+                <Download size={16} />
                 Resume
-              </a>
+              </button>
 
               {/* Social Media Icons */}
               <a
@@ -71,7 +95,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="bg-zinc-700 text-zinc-100 hover:bg-zinc-600 transition-colors duration-200 p-2 rounded-md"
               >
-                <Github size={32} className="w-6 h-6 sm:w-8 sm:h-8" />
+                <Github size={20} />
               </a>
               <a
                 href="https://www.linkedin.com/in/dhimasferdiansyah/"
@@ -79,7 +103,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="bg-zinc-700 text-zinc-100 hover:bg-zinc-600 transition-colors duration-200 p-2 rounded-md"
               >
-                <Linkedin size={32} className="w-6 h-6 sm:w-8 sm:h-8" />
+                <Linkedin size={20} />
               </a>
               <a
                 href="https://www.instagram.com/dhimas.ferdiansyah/"
@@ -87,7 +111,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="bg-zinc-700 text-zinc-100 hover:bg-zinc-600 transition-colors duration-200 p-2 rounded-md"
               >
-                <Instagram size={32} className="w-6 h-6 sm:w-8 sm:h-8" />
+                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -98,9 +122,10 @@ export default function Home() {
             <div className="mt-4">
               <h2 className="text-2xl font-bold text-white">About Me</h2>
               <p className="text-lg text-zinc-400 mt-2">
-                I am 21 years old, Bachelor in Information Systems and Fullstack
-                Web Developer with 3 years of experience. Focused on building
-                efficient web solutions.
+                Saya bekerja sebagai Kepala Satuan Pelayanan Pemenuhan Gizi di
+                Badan Gizi Nasional. Saya berusia 22 tahun, seorang Sarjana
+                Sistem Informasi dan Fullstack Web Developer dengan pengalaman 3
+                tahun yang berfokus pada pembangunan solusi web yang efisien
               </p>
             </div>
             {/* Skills */}
@@ -215,12 +240,49 @@ export default function Home() {
               <div className="flex gap-4 mt-4 items-start">
                 {/* Logo for Company 1 */}
                 <Image
+                  src="/bgn.png"
+                  width={48}
+                  height={48}
+                  alt="bgn Logo"
+                  className="w-12 h-12 object-cover rounded-full bg-zinc-700"
+                />
+
+                <div>
+                  <h3 className="text-lg font-bold text-zinc-400">
+                    Kepala Satuan Pelayanan Pemenuhan Gizi, Badan Gizi Nasional,
+                    Binjai{" "}
+                    <span className="bg-zinc-800 text-sky-400 text-sm py-1 px-3 rounded-full ml-2">
+                      2025
+                    </span>
+                  </h3>
+                  <div className="flex flex-col gap-1 mt-1">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
+                      <p className="text-lg text-zinc-500">
+                        Providing free nutritious meals to school children and
+                        pregnant and breastfeeding mothers
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      <p className="text-lg text-zinc-500">
+                        Ensure the quality and safety of food served
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-4 mt-4 items-start">
+                {/* Logo for Company 1 */}
+                <Image
                   src="/kominfo.png"
                   width={48}
                   height={48}
                   alt="Kominfo Logo"
                   className="w-12 h-12 object-cover rounded-full bg-zinc-700"
                 />
+
                 <div>
                   <h3 className="text-lg font-bold text-zinc-400">
                     Cybersecurity Analyst, Balitbang SDM - Ministry of
